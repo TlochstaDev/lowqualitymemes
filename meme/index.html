@@ -1,0 +1,17 @@
+<h1>Low Quality Memes</h1>
+<script>
+function load() {
+var url_string = window.location.href; 
+var url = new URL(url_string);
+var m = url.searchParams.get("m");
+document.getElementById("meme").setAttribute('src', m);
+var t = url.searchParams.get("t");
+document.getElementById("title").innerText = t;
+var p = url.searchParams.get("p");
+document.getElementById("poster").innerText = "Posted by " + p;
+}
+window.onload = load();
+</script>
+<h1 id="title"></h1>
+<h4 id="poster"></h4>
+<iframe id="meme" width="560" height="315" src="" title="Meme Player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
