@@ -4,7 +4,7 @@ function load() {
 var url_string = window.location.href; 
 var url = new URL(url_string);
 var m = url.searchParams.get("m");
-document.getElementById("meme").setAttribute('src', m);
+document.getElementById("meme").src = m;
 var t = url.searchParams.get("t");
 document.getElementById("title").innerText = t;
 var p = url.searchParams.get("p");
